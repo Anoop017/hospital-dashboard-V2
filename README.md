@@ -15,3 +15,22 @@ Auth, Users, Patients, Appointments
 
 Future:
 Will support Web + Mobile apps using same APIs.
+
+
+## Environment Variables
+
+
+The application requires the following environment variables:
+
+
+- PORT
+- NODE_ENV
+- MONGO_URI
+- REDIS_URL
+- JWT_ACCESS_SECRET
+- JWT_REFRESH_SECRET
+- ACCESS_TOKEN_EXPIRY
+- REFRESH_TOKEN_EXPIRY
+
+
+Refer to `.env.example` for setup.

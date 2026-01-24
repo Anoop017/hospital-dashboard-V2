@@ -1,14 +1,12 @@
 import { createClient } from 'redis'
-import dotenv from 'dotenv'
-
-dotenv.config()
+import { config } from './zod.js'
 
 const redisClient = createClient({
     socket: {
-        host: process.env.REDIS_HOST,
-        port: Number(process.env.REDIS_PORT)
+        host: config.REDIS_HOST,
+        port: Number(config.REDIS_PORT)
     },
-    password: process.env.REDIS_PASSWORD
+    password: config.REDIS_PASSWORD
 })
 
 redisClient.on("connect", () => {
